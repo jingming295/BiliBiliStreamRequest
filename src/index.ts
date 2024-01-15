@@ -17,12 +17,6 @@ const routers = [
 ];
 app.use('/', routers);
 
-app.get('/', async (req, res) => {
-  const response = await fetch('https://ip.3322.net');
-  const ip = await response.text();
-  res.send(ip);
-});
-
 app.listen(port, () =>
 {
   console.log(`server run at: http://localhost:${port}`);
